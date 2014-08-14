@@ -19,7 +19,8 @@ DEPEND="x11-libs/libX11
 	xinerama? (
 		x11-proto/xineramaproto
 		x11-libs/libXinerama
-		)"
+		)
+	media-libs/freetype:2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
