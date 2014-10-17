@@ -12,7 +12,12 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="tw"
 
-DEPEND=""
+RDEPEND="
+	dev-qt/qtxmlpatterns:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	"
+DEPEND=${RDEPEND}
 
 src_unpack() {
 	mkdir ${S}
