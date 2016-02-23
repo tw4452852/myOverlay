@@ -4,13 +4,10 @@
 
 EAPI=5
 
-inherit linux-mod git-2
+inherit linux-mod
 
 DESCRIPTION="rtl8192eu driver"
-HOMEPAGE="http://totorow.herokuapp.com"
-SRC_URI=""
-
-EGIT_REPO_URI="https://github.com/tw4452852/rtl8192eu-driver.git"
+SRC_URI="https://github.com/tw4452852/rtl8192eu-driver/raw/master/${PN}-${PV}.tar.gz"
 
 LICENSE=""
 SLOT="0"
@@ -20,6 +17,6 @@ IUSE=""
 DEPEND=" "
 RDEPEND="${DEPEND}"
 
-src_install() {
-	sudo ./install.sh
-}
+S=${WORKDIR}
+BUILD_TARGETS="clean modules"
+MODULE_NAMES="8192eu(drivers/net/wireless:${S})"
