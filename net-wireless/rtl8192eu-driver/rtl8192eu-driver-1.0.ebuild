@@ -4,10 +4,10 @@
 
 EAPI=5
 
-inherit linux-mod
+inherit linux-mod git-r3
 
 DESCRIPTION="rtl8192eu driver"
-SRC_URI="https://github.com/tw4452852/rtl8192eu-driver/raw/master/${PN}-${PV}.tar.gz"
+EGIT_REPO_URI="https://github.com/Mange/rtl8192eu-linux-driver"
 
 LICENSE=""
 SLOT="0"
@@ -19,4 +19,4 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 BUILD_TARGETS="clean modules"
-MODULE_NAMES="8192eu(drivers/net/wireless:${S})"
+MODULE_NAMES="8192eu(drivers/net/wireless:${S}/${P})"
