@@ -11,7 +11,10 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="tw"
 
-RDEPEND=""
+RDEPEND="
+	sys-apps/keyutils
+	sys-libs/libudev-compat
+"
 DEPEND=${RDEPEND}
 
 src_unpack() {
